@@ -1,5 +1,4 @@
 const inputValor = document.querySelector('#valorVenda');
-const inputProduto = document.querySelector('#produto');
 const inputData = document.querySelector('#dataVenda');
 const botaoAdicionar = document.querySelector('#btnAdicionar');
 
@@ -14,11 +13,10 @@ const limiteMei = 81000;
 botaoAdicionar.addEventListener('click',function(){
     const valor = inputValor.value;
     const data =  inputData.value;
-    const produto = inputProduto.value;
 
     const erroExistente = document.querySelector('.erro');
 
-if(valor === '' || data === '' || produto === ''){
+if(valor === '' || data === ''){
     if(erroExistente) return;
 
 
@@ -37,7 +35,7 @@ if(erroExistente){
 }
 
 const li = document.createElement('li');
-li.textContent = `${data} - ${produto} - R$ ${Number(valor).toFixed(2)}`; 
+li.textContent = `${data} - R$ ${Number(valor).toFixed(2)}`; 
 listaVendas.appendChild(li);
 
 
@@ -49,8 +47,6 @@ faturamentoAno.textContent = `R$ ${total.toFixed(2)}`;
 
 inputValor.value = '';
 inputData.value = '';
-inputProduto.value = '';
 inputValor.focus();
-
 });
 
