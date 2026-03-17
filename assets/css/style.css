@@ -7,6 +7,10 @@
 }
 
 body {
+      display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;    
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.5;
@@ -14,9 +18,10 @@ body {
 
 
 .container {
-    width: 90%;
+    width: 100%;
+    max-width: 800px;
     margin: 1rem auto ;
-    padding: 1rem;
+    padding: 1rem ;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -28,6 +33,7 @@ h1 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: #222;
+
 }
 
 
