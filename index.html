@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora MEI</title>
+
+  <!-- ligação com o CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- MAIN = conteúdo principal do sistema -->
+  <main class="container">
+
+    <!-- Título do sistema -->
+    <h1>Calculadora de Faturamento para MEI</h1>
+        <!-- SECTION = área de cadastro da venda -->
+    <section class="form-area">
+
+      <!-- Campo valor da venda -->
+      <input  type="number" id="valorVenda"  placeholder="Valor da venda" >
+
+      <input type="text" name="" id="produto" placeholder="produto">
+
+      <!-- Campo data -->
+      <input  type="date"  id="dataVenda">
+
+      <!-- Botão adicionar venda -->
+      <button id="btnAdicionar"> + Adicionar</button>
+
+    </section>
+
+        <!-- SECTION = lista das vendas -->
+    <section class="lista-vendas">
+
+      <h2>Vendas do Mês</h2>
+
+      <!-- Lista criada pelo JavaScript -->
+      <ul id="listaVendas"></ul>
+
+    </section>
+
+        <!-- SECTION = painel financeiro -->
+    <section class="painel">
+
+      <!-- CARD total do mês -->
+      <div class="card">
+        <h3>Total do Mês</h3>
+        <p id="totalMes">R$ 0,00</p>
+      </div>
+
+      <!-- CARD limite restante -->
+      <div class="card">
+        <h3>Limite Anual MEI Restante</h3>
+        <p id="restante">R$ 81.000,00</p>
+      </div>
+
+    </section>
+
+        <!-- SECTION = informações extras -->
+    <section class="info-mei">
+
+      <p>
+        Limite MEI anual: <strong>R$ 81.000,00</strong>
+      </p>
+
+      <p>
+        Faturamento acumulado no ano: 
+        <strong id="faturamentoAno">R$ 0,00</strong>
+      </p>
+
+    </section>
+
+      </main>
+
+  <!-- ligação com JavaScript -->
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
